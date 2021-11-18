@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* O ring é o primeiro circlo " o de cor preta "*/
+.ring{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 0 #262626;
+    background: transparent;
+    animation: animador 1s linear infinite;
+}
+
+/* Estilizando o texto Loading */
+.text{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    color: #262626;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 300px;
+    font-size: 2rem;
+    background: transparent;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    animation: textGrand 1s linear infinite;
+    transition: 3s;
+}
+
+/* animação para movimentação do texto*/
+@keyframes textGrand{
+    0%{
+        font-size: 0rem;
+    }
+    100%{
+        font-size: 1rem;
+        color: rgb(16, 139, 72);
+    }
+}
+
+/* Animação para a rotação do circlo */
+@keyframes animador{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
